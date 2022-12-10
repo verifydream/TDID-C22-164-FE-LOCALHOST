@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="dicoding:email" content="veri.200180150@mhs.unimal.ac.id">
+  <title>Daily</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<style>
+  body {
+    background-color: #def5e5;
+  }
+
+  .quotes {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    color: #333;
+  }
+
+  u {
+    text-decoration: none;
+  }
+
+  .icon {
+    font-size: 10em;
+  }
+
+  #mobile-menu {
+    display: none !important;
+    color: black !important;
+  }
+
+  #mobile-menu a {
+    color: black !important;
+  }
+
+  #mobile-menu i {
+    font-size: 30px;
+  }
+
+  .navbar {
+    background-color: #8ec3b0 !important;
+    margin-bottom: 0 !important;
+    border: 2px solid #9ed5c5;
+  }
+
+  .navbar-brand i {
+    margin-right: 10px;
+  }
+
+  @media (max-width: 767px) {
+    .navbar-brand {
+      display: none;
+    }
+
+    #mobile-menu {
+      display: flex !important;
+    }
+
+    .icon {
+      font-size: 5em;
+    }
+  }
+</style>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
+    <div class="container-fluid" style="justify-content: space-around !important">
+      <b>
+        <a class="navbar-brand" href="index.html"><i class="fas fa-calendar-day"></i>Daily</a>
+        <a class="navbar-brand" href="calendar.html"><i class="fas fa-calendar-week"></i>Calendar</a>
+        <a class="navbar-brand" href="todo.html"><i class="fas fa-tasks"></i>Manage Todo</a>
+        <a class="navbar-brand" href="recap.html"><i class="far fa-copy"></i>Report</a>
+        <a class="navbar-brand" href="about.html"><i class="fas fa-address-card"></i>About</a>
+      </b>
+    </div>
+    <div id="mobile-menu" class="container-fluid d-flex" style="justify-content: space-around !important">
+      <a href="index.html"><i class="fas fa-calendar-day"></i></a>
+      <a href="calendar.html"><i class="fas fa-calendar-week"></i></a>
+      <a href="todo.html"><i class="fas fa-tasks"></i></a>
+      <a href="recap.html"><i class="far fa-copy"></i></a>
+      <a href="about.html"><i class="fas fa-address-card"></i></a>
+    </div>
+  </nav>
+  <div>
+    <div id="quotes" style="text-align: center;
+    font-size: 2em;
+    color: blue;"></div>
+    <section class="vh-100">
+      <div class="container py-5 h-100">
+        <div id="span" class="float-left" style="font-weight: bold"></div>
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col">
+            <div class="card" id="list1" style="border-radius: 0.75rem; background-color: #eff1f2">
+              <div class="card-body py-4 px-4 px-md-5">
+                <p class="h1 text-center mt-3 mb-4 pb-3 text-primary">
+                  <u>Today's Todo</u>
+                </p>
+
+                <div id="todaybox"></div>
+              </div>
+            </div>
+          </div>
+          <div class="row" id="thisWeekProgress">
+            <div class="col-md-6 col-sm-12">
+              <div id="taskCompletion"></div>
+            </div>
+            <div class="col-md-6 col-sm-12">
+              <div id="complianceCompletion"></div>
+            </div>
+            <div class="col-md-6 col-sm-12 text-center">
+              <div id="tipsEmote"></div>
+            </div>
+            <div class="col-md-6 col-sm-12 text-center">
+              <h3 class="font-weight-bold" id="weekTips"></h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+<script src="index.js"></script>
+
+</html>
